@@ -4,6 +4,7 @@
 
 var Hapi = require('hapi')
 	, path = require('path')
+	, handler = require('./server/handler')
 	, server
 
 // Declare internals
@@ -21,7 +22,11 @@ internals.main = function () {
 	server.route([
 		{ method: 'GET', path: '/css/{path}', handler: { directory: { path: internals.css } } },
 		{ method: 'GET', path: '/js/{path}', handler: { directory: { path: internals.js } } },
-		{ method: 'GET', path: '/{path?}', handler: { directory: { path: './www/' } } }
+		{ method: 'GET', path: '/{path?}', handler: { directory: { path: './www/' } } },
+		{   method: 'GET'
+			, path: '/package/{package}'
+			, handler: handler.package
+		}
 	]);
 	server.start();
 };

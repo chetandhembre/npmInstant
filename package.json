@@ -1,0 +1,33 @@
+{
+  "name": "npmInstant",
+  "version": "1.0.0",
+  "description": "instant npm result",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/chetandhembre/npmInstant.git"
+  },
+  "author": "Chetan Dhembre <chetandhembre@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/chetandhembre/npmInstant/issues"
+  },
+  "homepage": "https://github.com/chetandhembre/npmInstant",
+  "dependencies": {
+    "brfs": "^1.2.0",
+    "handlebars": "^2.0.0-alpha.4",
+    "hapi": "^6.6.0",
+    "highlight.js": "^8.2.0",
+    "jade": "^1.5.0",
+    "lodash": "^2.4.1",
+    "marked": "^0.3.2",
+    "typeahead.js": "^0.10.5",
+    "wreck": "^4.0.0"
+  },
+	"browserify": {
+  	 "transform": ["brfs"]
+	}
+}
